@@ -189,6 +189,32 @@ function renderMetricPanels(metrics) {
   });
 }
 
+function renderLevelLegendCard() {
+  const container = document.getElementById("level-legend-card");
+  if (!container) return;
+  const items = [
+    ["A", "优先推荐"],
+    ["B", "重点跟进"],
+    ["C", "审慎评估"],
+    ["D", "持续观察"],
+  ];
+  container.innerHTML = `
+    <div class="level-legend-title">档位说明</div>
+    <div class="level-legend-list">
+      ${items
+        .map(
+          ([level, text]) => `
+            <div class="level-legend-item">
+              <span class="level-legend-badge level-${level.toLowerCase()}">${level}</span>
+              <span class="level-legend-text">${text}</span>
+            </div>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function normalizeCityName(name) {
   return String(name || "").replace(/市|区|县/g, "").trim();
 }
@@ -205,61 +231,13 @@ function getGuangdongCityAnchors() {
 
 function buildGuangdongBaseMap() {
   return `
-    <svg viewBox="0 0 430 410" class="gd-map-svg" role="img" aria-label="广东省样本城市分布图">
-      <defs>
-        <linearGradient id="gd-surface" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f6fbff" />
-          <stop offset="100%" stop-color="#dceeff" />
-        </linearGradient>
-        <linearGradient id="gd-sea" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f7fbff" />
-          <stop offset="100%" stop-color="#e0f1ff" />
-        </linearGradient>
-      </defs>
-      <rect x="0" y="0" width="430" height="410" rx="28" fill="url(#gd-sea)" />
-      <path
-        class="gd-coast-haze"
-        d="M292 80
-           C334 104 374 140 392 182
-           C406 214 404 270 372 322
-           L430 322 L430 0 L286 0 Z"
+    <div class="gd-map-image-mask">
+      <img
+        class="gd-map-image"
+        src="/Users/lyh/Desktop/5.15产学研文献/d38d2edb-d45c-46b0-b40b-7fc660a5cafc.png"
+        alt="广东省样本企业空间分布图"
       />
-      <path
-        class="gd-sea-band"
-        d="M302 92
-           C338 116 368 150 383 187
-           C399 227 394 266 370 305
-           C355 330 336 347 318 360
-           L430 360 L430 20 L304 20 Z"
-      />
-      <path
-        class="gd-map-outline"
-        d="M105 77
-           L162 54 L219 60 L278 72 L334 96 L364 132
-           L372 177 L387 218 L370 264 L342 305
-           L299 342 L244 358 L185 356 L140 338
-           L102 354 L72 338 L56 303 L41 263
-           L56 217 L70 178 L86 144 L92 110 Z"
-      />
-      <path
-        class="gd-map-inner"
-        d="M105 77
-           L162 54 L219 60 L278 72 L334 96 L364 132
-           L372 177 L387 218 L370 264 L342 305
-           L299 342 L244 358 L185 356 L140 338
-           L102 354 L72 338 L56 303 L41 263
-           L56 217 L70 178 L86 144 L92 110 Z"
-        fill="url(#gd-surface)"
-      />
-      <path
-        class="gd-river-line"
-        d="M98 228 C130 220 156 226 178 240 C203 255 233 262 271 258 C301 255 328 244 353 230"
-      />
-      <path
-        class="gd-river-line gd-river-line--soft"
-        d="M176 122 C196 142 214 162 235 182 C247 193 263 210 280 228"
-      />
-    </svg>
+    </div>
   `;
 }
 
@@ -341,7 +319,7 @@ function renderCompanyTable(payload) {
   const items = asArray(payload?.items);
   document.getElementById("table-count").textContent = `${payload?.total ?? items.length} 家样本企业`;
   if (items.length === 0) {
-    body.innerHTML = `<tr><td colspan="9" class="empty-row">当前筛选条件下暂无企业</td></tr>`;
+    body.innerHTML = `<tr><td colspan="7" class="empty-row">当前筛选条件下暂无企业</td></tr>`;
     return;
   }
   items.forEach((item, index) => {
@@ -357,12 +335,10 @@ function renderCompanyTable(payload) {
       <td class="cell-rank">${item.display_rank_label}</td>
       <td class="cell-company" title="${item.company_name}">${item.company_name}</td>
       <td class="cell-level level-${String(item.demo_white_list_level || item.white_list_level || "").toLowerCase()}">${item.demo_white_list_level || item.white_list_level || "未分层"}</td>
-      <td class="cell-bucket">${item.score_bucket || "待更新"}</td>
       <td class="cell-city">${item.city}</td>
       <td class="cell-chain">${item.chain_position}</td>
       <td class="cell-score">${formatScore(item.xgb_fusion_score)}</td>
       <td class="cell-score">${formatScore(item.graphsage_score)}</td>
-      <td class="cell-risk">${formatNumber(item.risk_events)}</td>
     `;
     row.addEventListener("click", async () => {
       state.currentCompanyId = item.company_id;
@@ -525,6 +501,7 @@ async function loadCompanies() {
 async function init() {
   initGlassSurface();
   initBlurTextHeadings();
+  renderLevelLegendCard();
   const summary = await getSummary();
   document.getElementById("sample-size-chip").textContent = summary.sample_size ?? "39";
   renderSummaryCards(summary.summary_cards);

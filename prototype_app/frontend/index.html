@@ -49,7 +49,6 @@
               <div>
                 <p class="panel-kicker">城市分布</p>
                 <h3>广东省样本企业空间分布</h3>
-                <p class="panel-desc">以气泡大小表示城市样本企业数量。</p>
               </div>
             </div>
             <div id="guangdong-map" class="guangdong-map"></div>
@@ -65,7 +64,10 @@
               <h3 data-blur-text data-animate-by="phrases" data-direction="bottom">关键解释特征</h3>
               <p class="panel-desc">展示结构化特征与图谱表征对模型输出的贡献强度。</p>
             </div>
-            <div class="panel-chip">样本范围 <span id="sample-size-chip">39</span></div>
+            <div class="analysis-head-side">
+              <div id="level-legend-card" class="level-legend-card"></div>
+              <div class="panel-chip">样本范围 <span id="sample-size-chip">39</span></div>
+            </div>
           </div>
           <div class="analysis-grid">
             <section class="analysis-features">
@@ -120,12 +122,10 @@
                       <th>排序</th>
                       <th>企业</th>
                       <th>等级</th>
-                      <th>梯队</th>
                       <th>城市</th>
                       <th>环节</th>
                       <th>融合分数</th>
                       <th>GraphSAGE</th>
-                      <th>风险数</th>
                     </tr>
                   </thead>
                   <tbody id="company-table-body"></tbody>
