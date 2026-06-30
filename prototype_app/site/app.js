@@ -23,6 +23,70 @@ function initGlassSurface() {
   });
 }
 
+function splitBlurText(text, mode) {
+  if (mode === "letters") {
+    return Array.from(text).map((segment) => ({
+      text: segment === " " ? "\u00A0" : segment,
+      isSpacer: segment === " ",
+    }));
+  }
+
+  if (mode === "phrases") {
+    return text
+      .split(/(?<=与)|(?<=的)|(?<=及)|(?<=、)|(?<=网络)|(?<=系统)/)
+      .map((segment) => segment.trim())
+      .filter(Boolean)
+      .map((segment, index, list) => ({
+        text: index < list.length - 1 ? `${segment}\u00A0` : segment,
+        isSpacer: false,
+      }));
+  }
+
+  return text.split(" ").map((segment, index, list) => ({
+    text: index < list.length - 1 ? `${segment}\u00A0` : segment,
+    isSpacer: false,
+  }));
+}
+
+function initBlurTextHeadings() {
+  const targets = document.querySelectorAll("[data-blur-text]");
+  targets.forEach((element) => {
+    if (element.dataset.blurReady === "true") return;
+
+    const text = (element.textContent || "").trim();
+    if (!text) return;
+
+    const animateBy = element.dataset.animateBy || "words";
+    const direction = element.dataset.direction || "top";
+    const parts = splitBlurText(text, animateBy);
+    const fragment = document.createDocumentFragment();
+
+    element.textContent = "";
+    element.classList.add("blur-text");
+    element.dataset.blurReady = "true";
+
+    parts.forEach((part, index) => {
+      const span = document.createElement("span");
+      span.className = "blur-text__segment";
+      span.textContent = part.text;
+      span.style.setProperty("--blur-delay", `${index * (animateBy === "letters" ? 42 : 110)}ms`);
+      span.dataset.direction = direction;
+      if (part.isSpacer) {
+        span.classList.add("blur-text__segment--space");
+      }
+      fragment.appendChild(span);
+    });
+
+    element.appendChild(fragment);
+  });
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll(".blur-text").forEach((element) => {
+      element.classList.add("blur-text--active");
+    });
+  });
+}
+
 async function fetchJSON(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -121,6 +185,145 @@ function renderMetricPanels(metrics) {
     `;
     container.appendChild(node);
   });
+}
+
+function normalizeCityName(name) {
+  return String(name || "").replace(/市|区|县/g, "").trim();
+}
+
+function getGuangdongCityAnchors() {
+  return {
+    广州: { x: 190, y: 238, labelDx: 0, labelDy: -32, valueDx: 0, valueDy: 22 },
+    深圳: { x: 255, y: 326, labelDx: 26, labelDy: 4, valueDx: 0, valueDy: -26 },
+    珠海: { x: 198, y: 343, labelDx: -6, labelDy: 24, valueDx: 0, valueDy: -24 },
+    佛山: { x: 172, y: 248, labelDx: -32, labelDy: 2, valueDx: 0, valueDy: 24 },
+    东莞: { x: 228, y: 296, labelDx: -34, labelDy: 2, valueDx: 0, valueDy: 22 },
+    中山: { x: 198, y: 312, labelDx: -24, labelDy: 18, valueDx: 0, valueDy: -24 },
+    惠州: { x: 274, y: 264, labelDx: 30, labelDy: -2, valueDx: 0, valueDy: 22 },
+    汕头: { x: 358, y: 257, labelDx: 28, labelDy: 2, valueDx: 0, valueDy: 22 },
+    汕尾: { x: 326, y: 282, labelDx: 30, labelDy: 0, valueDx: 0, valueDy: 22 },
+    揭阳: { x: 345, y: 236, labelDx: 30, labelDy: -2, valueDx: 0, valueDy: 22 },
+    潮州: { x: 367, y: 228, labelDx: 30, labelDy: -10, valueDx: 0, valueDy: 22 },
+    湛江: { x: 66, y: 344, labelDx: -8, labelDy: 24, valueDx: 0, valueDy: -24 },
+    茂名: { x: 95, y: 288, labelDx: -28, labelDy: 0, valueDx: 0, valueDy: 22 },
+    阳江: { x: 120, y: 272, labelDx: -30, labelDy: 0, valueDx: 0, valueDy: 22 },
+    江门: { x: 142, y: 298, labelDx: -30, labelDy: 12, valueDx: 0, valueDy: -24 },
+    肇庆: { x: 122, y: 214, labelDx: -32, labelDy: -4, valueDx: 0, valueDy: 22 },
+    清远: { x: 185, y: 167, labelDx: -10, labelDy: -28, valueDx: 0, valueDy: 22 },
+    韶关: { x: 206, y: 112, labelDx: 0, labelDy: -30, valueDx: 0, valueDy: 22 },
+    河源: { x: 274, y: 162, labelDx: 28, labelDy: -2, valueDx: 0, valueDy: 22 },
+    梅州: { x: 332, y: 154, labelDx: 28, labelDy: -6, valueDx: 0, valueDy: 22 },
+    云浮: { x: 104, y: 237, labelDx: -26, labelDy: -8, valueDx: 0, valueDy: 22 },
+  };
+}
+
+function buildGuangdongBaseMap() {
+  return `
+    <svg viewBox="0 0 430 410" class="gd-map-svg" role="img" aria-label="广东省样本城市分布图">
+      <defs>
+        <linearGradient id="gd-surface" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f6fbff" />
+          <stop offset="100%" stop-color="#dceeff" />
+        </linearGradient>
+        <linearGradient id="gd-sea" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f7fbff" />
+          <stop offset="100%" stop-color="#e0f1ff" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="430" height="410" rx="28" fill="url(#gd-sea)" />
+      <path
+        class="gd-coast-haze"
+        d="M292 80
+           C334 104 374 140 392 182
+           C406 214 404 270 372 322
+           L430 322 L430 0 L286 0 Z"
+      />
+      <path
+        class="gd-sea-band"
+        d="M302 92
+           C338 116 368 150 383 187
+           C399 227 394 266 370 305
+           C355 330 336 347 318 360
+           L430 360 L430 20 L304 20 Z"
+      />
+      <path
+        class="gd-map-outline"
+        d="M105 77
+           L162 54 L219 60 L278 72 L334 96 L364 132
+           L372 177 L387 218 L370 264 L342 305
+           L299 342 L244 358 L185 356 L140 338
+           L102 354 L72 338 L56 303 L41 263
+           L56 217 L70 178 L86 144 L92 110 Z"
+      />
+      <path
+        class="gd-map-inner"
+        d="M105 77
+           L162 54 L219 60 L278 72 L334 96 L364 132
+           L372 177 L387 218 L370 264 L342 305
+           L299 342 L244 358 L185 356 L140 338
+           L102 354 L72 338 L56 303 L41 263
+           L56 217 L70 178 L86 144 L92 110 Z"
+        fill="url(#gd-surface)"
+      />
+      <path
+        class="gd-river-line"
+        d="M98 228 C130 220 156 226 178 240 C203 255 233 262 271 258 C301 255 328 244 353 230"
+      />
+      <path
+        class="gd-river-line gd-river-line--soft"
+        d="M176 122 C196 142 214 162 235 182 C247 193 263 210 280 228"
+      />
+    </svg>
+  `;
+}
+
+function renderGuangdongMap(rows) {
+  const container = document.getElementById("guangdong-map");
+  if (!container) return;
+
+  const safeRows = asArray(rows);
+  const anchors = getGuangdongCityAnchors();
+  const normalizedRows = safeRows
+    .map((item) => {
+      const key = normalizeCityName(item.label || item.name);
+      return {
+        key,
+        label: item.label || item.name,
+        count: Number(item.count) || 0,
+        point: anchors[key],
+      };
+    })
+    .filter((item) => item.point);
+
+  container.innerHTML = buildGuangdongBaseMap();
+  if (normalizedRows.length === 0) {
+    container.insertAdjacentHTML("beforeend", `<div class="empty-state">暂无城市分布数据</div>`);
+    return;
+  }
+
+  const max = Math.max(...normalizedRows.map((item) => item.count), 1);
+  const overlay = document.createElement("div");
+  overlay.className = "gd-bubble-layer";
+
+  normalizedRows.forEach((item) => {
+    const bubble = document.createElement("button");
+    const size = 18 + (item.count / max) * 34;
+    bubble.type = "button";
+    bubble.className = "gd-bubble";
+    bubble.style.left = `${item.point.x}px`;
+    bubble.style.top = `${item.point.y}px`;
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.innerHTML = `
+      <span class="gd-bubble-core"></span>
+      <span class="gd-bubble-label" style="--label-dx:${item.point.labelDx || 0}px; --label-dy:${item.point.labelDy || 0}px;">${item.label}</span>
+      <span class="gd-bubble-value" style="--value-dx:${item.point.valueDx || 0}px; --value-dy:${item.point.valueDy || 0}px;">${formatNumber(item.count)}</span>
+    `;
+    bubble.setAttribute("aria-label", `${item.label}，${item.count}家企业`);
+    overlay.appendChild(bubble);
+  });
+
+  container.appendChild(overlay);
 }
 
 function populateFilters(filterOptions) {
@@ -331,13 +534,13 @@ async function loadCompanies() {
 
 async function init() {
   initGlassSurface();
+  initBlurTextHeadings();
   const summary = await getSummary();
   document.getElementById("sample-size-chip").textContent = summary.sample_size ?? "39";
   renderSummaryCards(summary.summary_cards);
   renderMetricPanels(summary.model_metrics || {});
-  renderBarList("demo-level-distribution", summary.demo_level_distribution || summary.level_distribution || []);
-  renderBarList("city-distribution", summary.city_distribution || []);
   renderBarList("feature-importance", summary.top_features || [], "importance");
+  renderGuangdongMap(summary.city_distribution || []);
   populateFilters(summary.filter_options || {});
   await loadCompanies();
 }

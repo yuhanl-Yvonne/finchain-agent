@@ -24,8 +24,8 @@
       <section class="hero glass-surface glass-surface--hero" data-glass data-glass-mode="static">
         <div class="hero-copy">
           <p class="eyebrow">FinChain-Agent / Official Console</p>
-          <h1>FinChain-Agent</h1>
-          <h2>基于知识图谱与图神经网络的产业链上下游企业白名单智能筛选系统</h2>
+          <h1 data-blur-text data-animate-by="letters" data-direction="top">FinChain-Agent</h1>
+          <h2 data-blur-text data-animate-by="phrases" data-direction="bottom">基于知识图谱与图神经网络的产业链上下游企业白名单智能筛选系统</h2>
           <p class="hero-text">
             面向产业链金融白名单初筛、关系穿透与可解释推荐的系统展示界面。
           </p>
@@ -34,50 +34,44 @@
             <span>GraphSAGE 图谱表征</span>
             <span>XGBoost 融合白名单</span>
           </div>
+          <div id="summary-cards" class="summary-grid"></div>
         </div>
         <div class="hero-panel">
-          <div id="summary-cards" class="summary-grid"></div>
+          <div class="map-card">
+            <div class="map-head">
+              <div>
+                <p class="panel-kicker">城市分布</p>
+                <h3>广东省样本企业空间分布</h3>
+                <p class="panel-desc">以气泡大小表示城市样本企业数量。</p>
+              </div>
+            </div>
+            <div id="guangdong-map" class="guangdong-map"></div>
+          </div>
         </div>
       </section>
 
       <section class="top-grid">
-        <article class="panel panel--overview glass-surface" data-glass data-glass-mode="lite">
+        <article class="panel panel--analysis glass-surface" data-glass data-glass-mode="lite">
           <div class="panel-head">
             <div>
-              <p class="panel-kicker">模型概览</p>
-              <h3>核心指标与梯队分布</h3>
-              <p class="panel-desc">以白名单推荐、图谱表征和企业分层结果为核心内容。</p>
+              <p class="panel-kicker">模型分析</p>
+              <h3>核心指标与关键解释特征</h3>
+              <p class="panel-desc">统一展示 GraphSAGE、XGBoost 与特征重要性结果。</p>
             </div>
             <div class="panel-chip">样本范围 <span id="sample-size-chip">39</span></div>
           </div>
-
-          <div id="metric-panels" class="metric-panels"></div>
-
-          <div class="overview-split">
-            <section class="mini-section">
-              <h4>分层等级分布</h4>
-              <div id="demo-level-distribution" class="bar-list"></div>
+          <div class="analysis-grid">
+            <section class="analysis-metrics">
+              <div id="metric-panels" class="metric-panels"></div>
             </section>
-            <section class="mini-section">
-              <h4>城市分布</h4>
-              <div id="city-distribution" class="bar-list"></div>
+            <section class="analysis-features">
+              <div class="legend-row">
+                <span class="legend-pill legend-structured">结构化特征</span>
+                <span class="legend-pill legend-graph">图谱表征特征</span>
+              </div>
+              <div id="feature-importance" class="bar-list feature-list"></div>
             </section>
           </div>
-        </article>
-
-        <article class="panel panel--insight glass-surface" data-glass data-glass-mode="lite">
-          <div class="panel-head">
-            <div>
-              <p class="panel-kicker">关键解释特征</p>
-              <h3>结构化特征与图谱表征</h3>
-              <p class="panel-desc">将 SHAP 与重要性结果统一映射为规范化特征名称。</p>
-            </div>
-          </div>
-          <div class="legend-row">
-            <span class="legend-pill legend-structured">结构化特征</span>
-            <span class="legend-pill legend-graph">图谱表征特征</span>
-          </div>
-          <div id="feature-importance" class="bar-list feature-list"></div>
         </article>
       </section>
 
@@ -90,17 +84,22 @@
               <p class="panel-desc">左侧呈现企业名单与筛选条件，右侧显示企业详情信息。</p>
             </div>
             <form id="filter-form" class="filter-form">
-              <input id="search-input" type="search" placeholder="搜索企业名称或统一社会信用代码" />
-              <select id="level-select">
+              <input
+                id="search-input"
+                class="liquid-control"
+                type="search"
+                placeholder="搜索企业名称或统一社会信用代码"
+              />
+              <select id="level-select" class="liquid-control">
                 <option value="">全部分层等级</option>
               </select>
-              <select id="city-select">
+              <select id="city-select" class="liquid-control">
                 <option value="">全部城市</option>
               </select>
-              <select id="chain-select">
+              <select id="chain-select" class="liquid-control">
                 <option value="">全部产业链环节</option>
               </select>
-              <button type="submit">应用筛选</button>
+              <button type="submit" class="liquid-button">应用筛选</button>
             </form>
           </div>
 
