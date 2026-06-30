@@ -29,6 +29,13 @@
           <p class="hero-text">
             面向产业链金融白名单初筛、关系穿透与可解释推荐的系统展示界面。
           </p>
+          <div class="hero-metrics glass-surface" data-glass data-glass-mode="lite">
+            <div class="hero-metrics-head">
+              <p class="panel-kicker">核心指标</p>
+              <h3 data-blur-text data-animate-by="phrases" data-direction="bottom">图谱表征与融合模型评估</h3>
+            </div>
+            <div id="metric-panels" class="metric-panels"></div>
+          </div>
           <div class="hero-tags">
             <span>知识图谱建模</span>
             <span>GraphSAGE 图谱表征</span>
@@ -55,15 +62,12 @@
           <div class="panel-head">
             <div>
               <p class="panel-kicker">模型分析</p>
-              <h3>核心指标与关键解释特征</h3>
-              <p class="panel-desc">统一展示 GraphSAGE、XGBoost 与特征重要性结果。</p>
+              <h3 data-blur-text data-animate-by="phrases" data-direction="bottom">关键解释特征</h3>
+              <p class="panel-desc">展示结构化特征与图谱表征对模型输出的贡献强度。</p>
             </div>
             <div class="panel-chip">样本范围 <span id="sample-size-chip">39</span></div>
           </div>
           <div class="analysis-grid">
-            <section class="analysis-metrics">
-              <div id="metric-panels" class="metric-panels"></div>
-            </section>
             <section class="analysis-features">
               <div class="legend-row">
                 <span class="legend-pill legend-structured">结构化特征</span>
@@ -80,7 +84,7 @@
           <div class="panel-head filter-head">
             <div>
               <p class="panel-kicker">企业列表</p>
-              <h3>样本企业分层结果</h3>
+              <h3 data-blur-text data-animate-by="phrases" data-direction="bottom">样本企业分层结果</h3>
               <p class="panel-desc">左侧呈现企业名单与筛选条件，右侧显示企业详情信息。</p>
             </div>
             <form id="filter-form" class="filter-form">
@@ -152,11 +156,11 @@
 
         <section class="detail-section detail-section--summary">
           <div>
-            <h4>企业概况</h4>
+            <h4 data-blur-text data-animate-by="phrases" data-direction="bottom">企业概况</h4>
             <p class="detail-report"></p>
           </div>
           <div>
-            <h4>解释结果</h4>
+            <h4 data-blur-text data-animate-by="phrases" data-direction="bottom">解释结果</h4>
             <p><strong>正向驱动：</strong><span class="detail-positive"></span></p>
             <p><strong>负向约束：</strong><span class="detail-negative"></span></p>
           </div>
@@ -164,17 +168,17 @@
 
         <section class="detail-section detail-section--split">
           <div>
-            <h4>图谱指标</h4>
+            <h4 data-blur-text data-animate-by="phrases" data-direction="bottom">图谱指标</h4>
             <div class="graph-grid"></div>
           </div>
           <div>
-            <h4>基础信息</h4>
+            <h4 data-blur-text data-animate-by="phrases" data-direction="bottom">基础信息</h4>
             <div class="info-grid"></div>
           </div>
         </section>
 
         <section class="detail-section">
-          <h4>经营范围</h4>
+          <h4 data-blur-text data-animate-by="phrases" data-direction="bottom">经营范围</h4>
           <p class="detail-scope"></p>
         </section>
       </div>

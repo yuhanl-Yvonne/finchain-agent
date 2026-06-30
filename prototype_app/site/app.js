@@ -129,14 +129,16 @@ function renderBarList(containerId, rows, valueKey = "count", className = "") {
   const max = Math.max(...safeRows.map((item) => Number(item[valueKey]) || 0), 1);
   safeRows.forEach((item) => {
     const row = document.createElement("div");
-    row.className = `bar-row ${className}`.trim();
+    const featureGroup =
+      item.group || (String(item.label || item.name || "").includes("图谱表征") ? "graph" : "structured");
+    row.className = `bar-row ${className} feature-card feature-card--${featureGroup}`.trim();
     row.innerHTML = `
       <div class="bar-meta">
         <span>${item.label || item.name}</span>
         <span>${valueKey === "importance" ? formatNumber(item[valueKey], 4) : formatNumber(item[valueKey])}</span>
       </div>
       <div class="bar-track">
-        <div class="bar-fill ${item.group || ""}" style="width:${((Number(item[valueKey]) || 0) / max) * 100}%"></div>
+        <div class="bar-fill ${featureGroup}" style="width:${((Number(item[valueKey]) || 0) / max) * 100}%"></div>
       </div>
     `;
     container.appendChild(row);
@@ -193,27 +195,11 @@ function normalizeCityName(name) {
 
 function getGuangdongCityAnchors() {
   return {
-    广州: { x: 190, y: 238, labelDx: 0, labelDy: -32, valueDx: 0, valueDy: 22 },
-    深圳: { x: 255, y: 326, labelDx: 26, labelDy: 4, valueDx: 0, valueDy: -26 },
-    珠海: { x: 198, y: 343, labelDx: -6, labelDy: 24, valueDx: 0, valueDy: -24 },
-    佛山: { x: 172, y: 248, labelDx: -32, labelDy: 2, valueDx: 0, valueDy: 24 },
-    东莞: { x: 228, y: 296, labelDx: -34, labelDy: 2, valueDx: 0, valueDy: 22 },
-    中山: { x: 198, y: 312, labelDx: -24, labelDy: 18, valueDx: 0, valueDy: -24 },
-    惠州: { x: 274, y: 264, labelDx: 30, labelDy: -2, valueDx: 0, valueDy: 22 },
-    汕头: { x: 358, y: 257, labelDx: 28, labelDy: 2, valueDx: 0, valueDy: 22 },
-    汕尾: { x: 326, y: 282, labelDx: 30, labelDy: 0, valueDx: 0, valueDy: 22 },
-    揭阳: { x: 345, y: 236, labelDx: 30, labelDy: -2, valueDx: 0, valueDy: 22 },
-    潮州: { x: 367, y: 228, labelDx: 30, labelDy: -10, valueDx: 0, valueDy: 22 },
-    湛江: { x: 66, y: 344, labelDx: -8, labelDy: 24, valueDx: 0, valueDy: -24 },
-    茂名: { x: 95, y: 288, labelDx: -28, labelDy: 0, valueDx: 0, valueDy: 22 },
-    阳江: { x: 120, y: 272, labelDx: -30, labelDy: 0, valueDx: 0, valueDy: 22 },
-    江门: { x: 142, y: 298, labelDx: -30, labelDy: 12, valueDx: 0, valueDy: -24 },
-    肇庆: { x: 122, y: 214, labelDx: -32, labelDy: -4, valueDx: 0, valueDy: 22 },
-    清远: { x: 185, y: 167, labelDx: -10, labelDy: -28, valueDx: 0, valueDy: 22 },
-    韶关: { x: 206, y: 112, labelDx: 0, labelDy: -30, valueDx: 0, valueDy: 22 },
-    河源: { x: 274, y: 162, labelDx: 28, labelDy: -2, valueDx: 0, valueDy: 22 },
-    梅州: { x: 332, y: 154, labelDx: 28, labelDy: -6, valueDx: 0, valueDy: 22 },
-    云浮: { x: 104, y: 237, labelDx: -26, labelDy: -8, valueDx: 0, valueDy: 22 },
+    广州: { x: 198, y: 242, labelDx: -84, labelDy: -44, valueDx: -84, valueDy: -20 },
+    深圳: { x: 262, y: 320, labelDx: 72, labelDy: 26, valueDx: 72, valueDy: 48 },
+    珠海: { x: 197, y: 339, labelDx: -78, labelDy: 30, valueDx: -78, valueDy: 52 },
+    佛山: { x: 173, y: 248, labelDx: -82, labelDy: 6, valueDx: -82, valueDy: 28 },
+    东莞: { x: 229, y: 292, labelDx: 70, labelDy: -12, valueDx: 70, valueDy: 12 },
   };
 }
 
@@ -283,6 +269,7 @@ function renderGuangdongMap(rows) {
 
   const safeRows = asArray(rows);
   const anchors = getGuangdongCityAnchors();
+  const focusCities = new Set(["广州", "深圳", "珠海", "佛山", "东莞"]);
   const normalizedRows = safeRows
     .map((item) => {
       const key = normalizeCityName(item.label || item.name);
@@ -293,7 +280,7 @@ function renderGuangdongMap(rows) {
         point: anchors[key],
       };
     })
-    .filter((item) => item.point);
+    .filter((item) => item.point && focusCities.has(item.key));
 
   container.innerHTML = buildGuangdongBaseMap();
   if (normalizedRows.length === 0) {
@@ -316,6 +303,8 @@ function renderGuangdongMap(rows) {
     bubble.style.height = `${size}px`;
     bubble.innerHTML = `
       <span class="gd-bubble-core"></span>
+      <span class="gd-bubble-ring"></span>
+      <span class="gd-bubble-line" style="--line-width:${Math.max(Math.abs(item.point.labelDx || 0), 34)}px;"></span>
       <span class="gd-bubble-label" style="--label-dx:${item.point.labelDx || 0}px; --label-dy:${item.point.labelDy || 0}px;">${item.label}</span>
       <span class="gd-bubble-value" style="--value-dx:${item.point.valueDx || 0}px; --value-dy:${item.point.valueDy || 0}px;">${formatNumber(item.count)}</span>
     `;
@@ -452,6 +441,7 @@ function renderCompanyDetail(payload) {
 
   container.innerHTML = "";
   container.appendChild(node);
+  initBlurTextHeadings();
 }
 
 function getActiveFilters() {
