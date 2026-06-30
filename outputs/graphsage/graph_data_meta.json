@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "num_nodes": 466,
+  "num_edges": 94532,
+  "positive_labels": 40,
+  "train_size": 326,
+  "val_size": 69,
+  "test_size": 71,
+  "feature_dim": 72,
+  "graph_sources": {
+    "region_from_neo4j": 0,
+    "chain_from_neo4j": 0
+  }
+}

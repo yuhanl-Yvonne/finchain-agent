@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440101MA9W1BQA5Y",
+    "company_name": "广东汇天航空航天科技有限公司",
+    "standard_name": "广东汇天航空航天科技有限公司",
+    "city": "广州市",
+    "district": "天河区",
+    "chain_position": "中游",
+    "company_type": "产业运营类",
+    "company_size": "中型",
+    "registered_capital": "33000万美元",
+    "insured_count": 169,
+    "credit_score": null,
+    "legal_representative": "赵德力",
+    "status": "存续",
+    "website": "https://www.aeroht.com",
+    "address": "广州市天河区岑村丰庄大街8号8层801室",
+    "chain_basis": "飞行器、航空、航天、智能无人飞行器、系统集成",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 19,
+    "display_rank_label": "#19",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.994363,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.9882334,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-技术协作活跃度(-0.015)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 47
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 31033.0,
+    "macro_per_gdp_latest": 164171.0,
+    "macro_high_tech_latest": 13727.0,
+    "macro_patent_auth_latest": 37934.0,
+    "enterprise_age": 5.0,
+    "patent_total": 47,
+    "patent_recent_3y": 46,
+    "patent_breadth": 23.0
+  },
+  "scope": "工程和技术研究和试验发展（除人体干细胞、基因诊断与治疗技术开发和应用，中国稀有和特有的珍贵优良品种）;汽车销售;新能源汽车整车销售;技术进出口;智能无人飞行器制造;智能无人飞行器销售;货物进出口;互联网销售（除销售需要许可的商品）;智能机器人销售;试验机销售;工业机器人制造;特殊作业机器人制造;工业机器人安装、维修;工业机器人销售;智能机器人的研发;机械设备租赁;机械零件、零部件销售;电气机械设备销售;机械设备研发;电子、机械设备维护（不含特种设备）;技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广;专用设备制造（不含许可类专业设备制造）;特种设备销售;软件销售;软件开发;信息技术咨询服务;科技中介服务;通信设备制造;通信设备销售;智能车载设备制造;通用设备修理;电子元器件与机电组件设备销售;电子元器件与机电组件设备制造;工业自动控制系统装置制造;电气设备修理;风动和电动工具制造;紧固件制造;仪器仪表修理;交通安全、管制专用设备制造;信息系统集成服务;通讯设备修理;航空运输设备销售",
+  "generated_report": "广东汇天航空航天科技有限公司在样本企业中排序 19，分层等级为 B 类，融合分数 0.994363，GraphSAGE 分数 0.988233。企业位于广州市天河区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 47。主要正向因素包括：图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-技术协作活跃度(-0.015)。"
+}

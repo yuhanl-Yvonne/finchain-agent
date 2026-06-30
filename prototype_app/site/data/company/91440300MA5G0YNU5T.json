@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300MA5G0YNU5T",
+    "company_name": "美团科技有限公司",
+    "standard_name": "美团科技有限公司",
+    "city": "深圳市",
+    "district": "龙华区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "大型",
+    "registered_capital": "30000万人民币",
+    "insured_count": 388,
+    "credit_score": null,
+    "legal_representative": "穆荣均",
+    "status": "存续",
+    "website": "-",
+    "address": "深圳市龙华区民治街道北站社区汇隆商务中心2号楼1103",
+    "chain_basis": "系统集成",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 22,
+    "display_rank_label": "#22",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.994058,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99519014,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.530)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "经度(-0.037)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 15,
+    "patent_degree": 11
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 6.0,
+    "patent_total": 11,
+    "patent_recent_3y": 11,
+    "patent_breadth": 9.0
+  },
+  "scope": "一般经营项目：计算机软件技、网络技术研发。计算机系统集成；企业形象策划、展览展示策划、会务服务、企业管理咨询、商务信息咨询、经济信息咨询、市场营销策划（不含市场调查、社会调查、资信调查等国家限制类、禁止类项目）销售自行开发的软件产品;计算机硬件及其配套设备的批发、零售、佣金代理（不含拍卖）、进出口及相关配套业务（不涉及国营贸易管理商品，涉及配额、许可证管理及其它专项规定管理的商品，按国家有关规定办理申请）;从事广告业务;供应链管理;普通货运。以上经营范围不含国家规定实施准入特别管理措施的项目，涉及备案许可资质的需取得相关证件后方可实际经营。许可经营项目：无。",
+  "generated_report": "美团科技有限公司在样本企业中排序 22，分层等级为 C 类，融合分数 0.994058，GraphSAGE 分数 0.995190。企业位于深圳市龙华区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 15、专利连接 11。主要正向因素包括：图谱表征-核心企业协同强度(2.530)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：经度(-0.037)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

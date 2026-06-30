@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300MA5FA4QL2L",
+    "company_name": "丰翼科技(深圳)有限公司",
+    "standard_name": "丰翼科技(深圳)有限公司",
+    "city": "深圳市",
+    "district": "宝安区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "小型",
+    "registered_capital": "4285.7144万人民币",
+    "insured_count": 135,
+    "credit_score": null,
+    "legal_representative": "冯黎",
+    "status": "存续",
+    "website": "http://www.fyuav.cn",
+    "address": "深圳市宝安区航城街道草围社区深圳机场航站四路1111号顺丰华南转运中心综合楼六层",
+    "chain_basis": "无人机、飞行器、航空、智能无人飞行器、航空器",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 1,
+    "display_rank_label": "#1",
+    "demo_white_list_level": "A",
+    "original_white_list_level": "A",
+    "score_bucket": "旗舰梯队",
+    "xgb_fusion_score": 0.994532,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99746263,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 39
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 7.0,
+    "patent_total": 39,
+    "patent_recent_3y": 18,
+    "patent_breadth": 24.0
+  },
+  "scope": "一般经营项目：计算机软件研发；系统集成的技术转让，技术咨询，技术服务；销售电子产品；无人机研发、销售、租赁及上门维修，经营进出口业务（以上法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）。软件开发；信息系统集成服务；电子产品销售；智能无人飞行器销售；智能输配电及控制设备销售；人工智能行业应用系统集成服务；人工智能应用软件开发；人工智能硬件销售；智能机器人的研发；智能物料搬运装备销售；工业机器人销售；仓储设备租赁服务；供应链管理服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：生产计算机软件；电子产品，无人机的生产。工业机器人安装、维修；普通货物仓储服务（不含危险化学品等需许可审批的项目）；工业机器人制造；智能无人飞行器制造；输配电及控制设备制造；通用航空服务；技术进出口；快递服务；民用航空器零部件设计和生产；民用航空器（发动机、螺旋桨）生产；汽车销售。第二类增值电信业务；民用航空器驾驶员培训。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "generated_report": "丰翼科技(深圳)有限公司在样本企业中排序 1，分层等级为 A 类，融合分数 0.994532，GraphSAGE 分数 0.997463。企业位于深圳市宝安区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 39。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)。"
+}

@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "914419007385933083",
+    "company_name": "广东电网有限责任公司东莞供电局",
+    "standard_name": "广东电网有限责任公司东莞供电局",
+    "city": "东莞市",
+    "district": "东莞市",
+    "chain_position": "下游",
+    "company_type": "产业运营类",
+    "company_size": "-",
+    "registered_capital": "-",
+    "insured_count": 5966,
+    "credit_score": null,
+    "legal_representative": "左新宇",
+    "status": "存续",
+    "website": "-",
+    "address": "广东省东莞市东城街道东城路东城段239号",
+    "chain_basis": "服务",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 8,
+    "display_rank_label": "#8",
+    "demo_white_list_level": "A",
+    "original_white_list_level": "A",
+    "score_bucket": "旗舰梯队",
+    "xgb_fusion_score": 0.994532,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.967428,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 4,
+    "patent_degree": 9
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 12282.0,
+    "macro_per_gdp_latest": 116661.0,
+    "macro_high_tech_latest": 10200.0,
+    "macro_patent_auth_latest": 15269.0,
+    "enterprise_age": 23.0,
+    "patent_total": 9,
+    "patent_recent_3y": 9,
+    "patent_breadth": 8.0
+  },
+  "scope": "电网经营管理，调峰调频电厂经营管理；电力购销，电力过网和交易服务，电力工程建设，经营电力有关的信息产业，电力设备、电力器材的销售。(依法须经批准的项目，经相关部门批准后方可开展经营活动)〓",
+  "generated_report": "广东电网有限责任公司东莞供电局在样本企业中排序 8，分层等级为 A 类，融合分数 0.994532，GraphSAGE 分数 0.967428。企业位于东莞市东莞市，处于下游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 4、专利连接 9。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)。"
+}

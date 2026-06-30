@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300MADFQJH81G",
+    "company_name": "深圳市智源万联科技有限公司",
+    "standard_name": "深圳市智源万联科技有限公司",
+    "city": "深圳市",
+    "district": "南山区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "未标注",
+    "registered_capital": "未披露",
+    "insured_count": null,
+    "credit_score": 58.0,
+    "legal_representative": "未披露",
+    "status": "存续",
+    "website": "未披露",
+    "address": "深圳市南山区粤海街道科技园社区科苑路11号金融科技大厦23-A04",
+    "chain_basis": "系统集成",
+    "data_source": "天眼查关键词企业"
+  },
+  "model_info": {
+    "demo_rank": 20,
+    "display_rank_label": "#20",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.994228,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99286336,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.536)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图嵌入特征emb_14(-0.016)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 1
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 1.0,
+    "patent_total": 1,
+    "patent_recent_3y": 1,
+    "patent_breadth": 1.0
+  },
+  "scope": "人工智能理论与算法软件开发；人工智能应用软件开发；人工智能行业应用系统集成服务；人工智能公共数据平台；人工智能通用应用系统；人工智能基础资源与技术平台；人工智能公共服务平台技术咨询服务；信息系统集成服务；工业设计服务；科技中介服务；物联网技术研发；物联网技术服务；信息技术咨询服务；软件开发；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；自费出国留学中介服务；教育咨询服务（不含涉许可审批的教育培训活动）；招生辅助服务；业务培训（不含教育培训、职业技能培训等需取得许可的培训）；信息咨询服务（不含许可类信息咨询服务）；咨询策划服务；摄像及视频制作服务；数字内容制作服务（不含出版发行）；互联网销售（除销售需要许可的商品）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）无",
+  "generated_report": "深圳市智源万联科技有限公司在样本企业中排序 20，分层等级为 B 类，融合分数 0.994228，GraphSAGE 分数 0.992863。企业位于深圳市南山区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 1。主要正向因素包括：图谱表征-核心企业协同强度(2.536)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图嵌入特征emb_14(-0.016)。"
+}

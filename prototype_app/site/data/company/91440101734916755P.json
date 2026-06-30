@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440101734916755P",
+    "company_name": "广东电网有限责任公司广州供电局",
+    "standard_name": "广东电网有限责任公司广州供电局",
+    "city": "广州市",
+    "district": "天河区",
+    "chain_position": "下游",
+    "company_type": "投资发展类",
+    "company_size": "-",
+    "registered_capital": "-",
+    "insured_count": 0,
+    "credit_score": null,
+    "legal_representative": "许树楷",
+    "status": "存续",
+    "website": "-",
+    "address": "广州市天河区天河南二路2号",
+    "chain_basis": "服务",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 25,
+    "display_rank_label": "#25",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.993983,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.97439617,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.534)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-技术协作活跃度(-0.065)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 3,
+    "patent_degree": 33
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 31033.0,
+    "macro_per_gdp_latest": 164171.0,
+    "macro_high_tech_latest": 13727.0,
+    "macro_patent_auth_latest": 37934.0,
+    "enterprise_age": 23.0,
+    "patent_total": 33,
+    "patent_recent_3y": 30,
+    "patent_breadth": 23.0
+  },
+  "scope": "送变电工程专业承包;电力电子技术服务;信息技术咨询服务;电气设备零售;电力输送设施安装工程服务;建筑物电力系统安装;电工器材零售;企业自有资金投资;电力供应;承装（修、试）电力设施",
+  "generated_report": "广东电网有限责任公司广州供电局在样本企业中排序 25，分层等级为 C 类，融合分数 0.993983，GraphSAGE 分数 0.974396。企业位于广州市天河区，处于下游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 3、专利连接 33。主要正向因素包括：图谱表征-核心企业协同强度(2.534)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-技术协作活跃度(-0.065)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

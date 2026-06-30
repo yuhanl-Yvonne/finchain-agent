@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300671877217N",
+    "company_name": "深城交科技集团股份有限公司",
+    "standard_name": "深城交科技集团股份有限公司",
+    "city": "深圳市",
+    "district": "龙华区",
+    "chain_position": "中游",
+    "company_type": "投资发展类",
+    "company_size": "大型",
+    "registered_capital": "52728万人民币",
+    "insured_count": 724,
+    "credit_score": null,
+    "legal_representative": "林涛",
+    "status": "存续",
+    "website": "http://www.sutpc.com",
+    "address": "深圳市龙华区民治街道北站社区龙华设计产业园总部大厦1栋1101",
+    "chain_basis": "系统集成",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 29,
+    "display_rank_label": "#29",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.993847,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.9998952,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.417)",
+    "top_negative": "图谱表征-关系稳定性(-0.059)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 23
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 17.0,
+    "patent_total": 23,
+    "patent_recent_3y": 23,
+    "patent_breadth": 12.0
+  },
+  "scope": "一般经营项目：交通规划设计研究（含专项调查）；城市规划与建筑设计；会务服务；自有物业租赁。（企业经营涉及前置性行政许可的，须取得前置性行政许可文件后方可经营）；信息系统运行维护服务；物联网技术研发；物联网设备销售；物联网技术服务；大数据服务；工程管理服务；以自有资金从事投资活动。信息技术咨询服务；软件开发；自有资金投资的资产管理服务；货物进出口；技术进出口；软件销售；信息系统集成服务；企业管理咨询。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：对外承包工程；建设工程施工。建设工程勘察；建设工程设计；建筑智能化系统设计。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "generated_report": "深城交科技集团股份有限公司在样本企业中排序 29，分层等级为 C 类，融合分数 0.993847，GraphSAGE 分数 0.999895。企业位于深圳市龙华区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 23。主要正向因素包括：图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.417)。主要约束因素包括：图谱表征-关系稳定性(-0.059)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

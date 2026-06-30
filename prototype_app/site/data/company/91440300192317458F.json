@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300192317458F",
+    "company_name": "比亚迪股份有限公司",
+    "standard_name": "比亚迪股份有限公司",
+    "city": "深圳市",
+    "district": "龙岗区",
+    "chain_position": "下游",
+    "company_type": "服务平台类",
+    "company_size": "大型",
+    "registered_capital": "911719.7565万人民币",
+    "insured_count": 2625,
+    "credit_score": null,
+    "legal_representative": "王传福",
+    "status": "存续",
+    "website": "https://www.bydglobal.com/en/index.html",
+    "address": "深圳市大鹏新区葵涌街道延安路一号",
+    "chain_basis": "服务、交通",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 31,
+    "display_rank_label": "#31",
+    "demo_white_list_level": "D",
+    "original_white_list_level": "A",
+    "score_bucket": "观察梯队",
+    "xgb_fusion_score": 0.993634,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99941766,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.521)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-技术协作活跃度(-0.065)；经度(-0.037)；图谱表征-风险隔离度(-0.028)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 4,
+    "patent_degree": 61
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 30.0,
+    "patent_total": 61,
+    "patent_recent_3y": 61,
+    "patent_breadth": 27.0
+  },
+  "scope": "一般经营项目：无。许可经营项目：锂离子电池以及其他电池、充电器、电子产品、仪器仪表、柔性线路板、五金制品、液晶显示器、手机零配件、模具、塑胶制品及其相关附件的生产、销售；3D眼镜、GPS导航产品的研发、生产及销售；货物及技术进出口（不含分销、国家专营专控商品）；作为比亚迪汽车有限公司比亚迪品牌乘用车、电动车的总经销商，从事上述品牌的乘用车、电动车及其零部件的营销、批发和出口，提供售后服务；电池管理系统、换流柜、逆变柜/器、汇流箱、开关柜、储能机组的销售；汽车电子装置研发、销售；新能源汽车关键零部件研发以及上述零部件的关键零件、部件的研发、销售；轨道交通运输设备（含轨道交通车辆、工程机械、各类机电设备、电子设备及零部件、电子电气件、轨道交通信号系统、通信及综合监控系统与设备）的研发、设计、销售、租赁与售后服务（不涉及国营贸易管理商品，涉及配额、许可证管理及其他专项管理的商品，按国家有关规定办理申请）；轨道梁柱的研发、设计、销售；自有物业租赁（物业位于大鹏新区葵涌街道延安路一号比亚迪工业园内及龙岗区龙岗街道宝龙工业城宝荷路3001号比亚迪工业园内）；广告设计、制作、代理及发布；信息与技术咨询、技术服务。",
+  "generated_report": "比亚迪股份有限公司在样本企业中排序 31，分层等级为 D 类，融合分数 0.993634，GraphSAGE 分数 0.999418。企业位于深圳市龙岗区，处于下游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 4、专利连接 61。主要正向因素包括：图谱表征-核心企业协同强度(2.521)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-技术协作活跃度(-0.065)；经度(-0.037)；图谱表征-风险隔离度(-0.028)。"
+}

@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440115734926603P",
+    "company_name": "广州市华科尔科技股份有限公司",
+    "standard_name": "广州市华科尔科技股份有限公司",
+    "city": "广州市",
+    "district": "南沙区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "中型",
+    "registered_capital": "2688.88万人民币",
+    "insured_count": 158,
+    "credit_score": null,
+    "legal_representative": "袁桂兴",
+    "status": "存续",
+    "website": "http://www.walkera.com",
+    "address": "广州市南沙区东涌镇太石工业区",
+    "chain_basis": "无人机、航空",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 4,
+    "display_rank_label": "#4",
+    "demo_white_list_level": "A",
+    "original_white_list_level": "A",
+    "score_bucket": "旗舰梯队",
+    "xgb_fusion_score": 0.994532,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.98725224,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 3,
+    "patent_degree": 14
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 31033.0,
+    "macro_per_gdp_latest": 164171.0,
+    "macro_high_tech_latest": 13727.0,
+    "macro_patent_auth_latest": 37934.0,
+    "enterprise_age": 24.0,
+    "patent_total": 14,
+    "patent_recent_3y": 9,
+    "patent_breadth": 12.0
+  },
+  "scope": "消防车辆销售;无人机软硬件的技术开发、应用;电子、通信与自动控制技术研究、开发;航空模拟机飞行模拟训练相关软件的销售;无人机的销售;货物进出口（专营专控商品除外）;销售本公司生产的产品（国家法律法规禁止经营的项目除外；涉及许可经营的产品需取得许可证后方可经营）;智能机器系统销售;机器人系统销售;智能机器销售;玩具批发;计算机批发;计算机零配件批发;软件批发;消防设备、器材的批发;航空模拟机租赁;软件开发;数字动漫制作;游戏软件设计制作;消防设备、器材的制造;民用无人机制造（法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）;微电机及其他电机制造;机器人系统生产;智能机器系统生产;信息技术咨询服务;软件测试服务;农业机械服务;林业机械服务;滑翔机批发;航空模型批发;礼仪电子用品制造;普通劳动防护用品制造;",
+  "generated_report": "广州市华科尔科技股份有限公司在样本企业中排序 4，分层等级为 A 类，融合分数 0.994532，GraphSAGE 分数 0.987252。企业位于广州市南沙区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 3、专利连接 14。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)。"
+}

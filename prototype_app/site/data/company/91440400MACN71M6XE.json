@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440400MACN71M6XE",
+    "company_name": "广东横琴东昇防务科技有限公司",
+    "standard_name": "广东横琴东昇防务科技有限公司",
+    "city": "珠海市",
+    "district": "未标注",
+    "chain_position": "上游",
+    "company_type": "服务平台类",
+    "company_size": "未标注",
+    "registered_capital": "未披露",
+    "insured_count": null,
+    "credit_score": 68.0,
+    "legal_representative": "未披露",
+    "status": "存续",
+    "website": "未披露",
+    "address": "珠海市横琴天羽道48号1011文化创意",
+    "chain_basis": "系统集成",
+    "data_source": "天眼查关键词企业"
+  },
+  "model_info": {
+    "demo_rank": 38,
+    "display_rank_label": "#38",
+    "demo_white_list_level": "D",
+    "original_white_list_level": "D",
+    "score_bucket": "观察梯队",
+    "xgb_fusion_score": 0.010614,
+    "xgb_pred_label": "否",
+    "graphsage_score": 0.022433534,
+    "graphsage_pred_label": "否",
+    "sample_label": "否",
+    "true_label": "否",
+    "top_positive": "图谱表征-业务稳定性(0.156)；图谱表征-产业链邻近性(0.128)；图谱表征-上下游连接广度(0.037)",
+    "top_negative": "图谱表征-核心企业协同强度(-2.728)；企业年龄(-1.351)；图谱表征-创新扩散势能(-0.501)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 0
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 4479.0,
+    "macro_per_gdp_latest": 178712.0,
+    "macro_high_tech_latest": 2974.0,
+    "macro_patent_auth_latest": 11527.0,
+    "enterprise_age": 0.0,
+    "patent_total": 0,
+    "patent_recent_3y": null,
+    "patent_breadth": null
+  },
+  "scope": "一般项目：雷达及配套设备制造；通信设备制造；通信设备销售；卫星导航服务；集成电路芯片设计及服务；计算机系统服务；信息系统集成服务；信息技术咨询服务；计算机软硬件及辅助设备零售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；电子元器件零售；电子元器件制造；电子产品销售；雷达、无线电导航设备专业修理。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+  "generated_report": "广东横琴东昇防务科技有限公司在样本企业中排序 38，分层等级为 D 类，融合分数 0.010614，GraphSAGE 分数 0.022434。企业位于珠海市未标注，处于上游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 0。主要正向因素包括：图谱表征-业务稳定性(0.156)；图谱表征-产业链邻近性(0.128)；图谱表征-上下游连接广度(0.037)。主要约束因素包括：图谱表征-核心企业协同强度(-2.728)；企业年龄(-1.351)；图谱表征-创新扩散势能(-0.501)。"
+}

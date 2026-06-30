@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local runtime artifacts
+*.log
+.pytest_cache/
+
+# Generated local static artifacts can be rebuilt
+prototype_app/site/.DS_Store
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "914403007954257495",
+    "company_name": "深圳市大疆创新科技有限公司",
+    "standard_name": "深圳市大疆创新科技有限公司",
+    "city": "深圳市",
+    "district": "南山区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "大型",
+    "registered_capital": "3000万人民币",
+    "insured_count": 5965,
+    "credit_score": null,
+    "legal_representative": "罗镇华",
+    "status": "存续",
+    "website": "https://store.dji.com/cn",
+    "address": "深圳市南山区西丽街道西丽社区仙元路53号大疆天空之城T2大堂",
+    "chain_basis": "航空、航空器",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 32,
+    "display_rank_label": "#32",
+    "demo_white_list_level": "D",
+    "original_white_list_level": "A",
+    "score_bucket": "观察梯队",
+    "xgb_fusion_score": 0.993426,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.9984725,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.528)；企业年龄(1.608)；图谱表征-创新扩散势能(0.424)",
+    "top_negative": "图谱表征-技术协作活跃度(-0.065)；图谱表征-关系稳定性(-0.059)；图谱表征-风险隔离度(-0.028)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 3,
+    "patent_degree": 244
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 19.0,
+    "patent_total": 244,
+    "patent_recent_3y": 28,
+    "patent_breadth": 99.0
+  },
+  "scope": "一般经营项目：航空电子设备、自动控制设备、无人驾驶航空器、无线电数据传输系统、电子元器件、计算机软件的生产（由分公司经营）及其应用的技术开发、批发、进出口及相关配套业务（不涉及国营贸易管理商品，涉及配额、许可证管理及其他专项规定管理的商品，按国家有关规定办理申请）；软件技术信息咨询；教育信息咨询。智能机器人的研发；机械设备研发。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：无。",
+  "generated_report": "深圳市大疆创新科技有限公司在样本企业中排序 32，分层等级为 D 类，融合分数 0.993426，GraphSAGE 分数 0.998472。企业位于深圳市南山区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 3、专利连接 244。主要正向因素包括：图谱表征-核心企业协同强度(2.528)；企业年龄(1.608)；图谱表征-创新扩散势能(0.424)。主要约束因素包括：图谱表征-技术协作活跃度(-0.065)；图谱表征-关系稳定性(-0.059)；图谱表征-风险隔离度(-0.028)。"
+}

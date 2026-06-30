@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "914403007787549030",
+    "company_name": "深圳市好盈科技股份有限公司",
+    "standard_name": "深圳市好盈科技股份有限公司",
+    "city": "深圳市",
+    "district": "龙岗区",
+    "chain_position": "中游",
+    "company_type": "投资发展类",
+    "company_size": "中型",
+    "registered_capital": "5855万人民币",
+    "insured_count": 406,
+    "credit_score": null,
+    "legal_representative": "张捷",
+    "status": "存续",
+    "website": "https://www.hobbywing.com",
+    "address": "深圳市龙岗区宝龙街道宝龙社区诚信路8号亚森工业厂区4号厂房101-402",
+    "chain_basis": "飞行器、智能无人飞行器、控制系统",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 27,
+    "display_rank_label": "#27",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.993893,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99700123,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.523)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "经度(-0.037)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 14
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 20.0,
+    "patent_total": 14,
+    "patent_recent_3y": 12,
+    "patent_breadth": 8.0
+  },
+  "scope": "电子控制产品的技术开发及销售；投资兴办实业（具体项目另行申报）；经营进出口业务。电子元器件与机电组件设备销售；智能无人飞行器销售；智能无人飞行器制造；电机制造；电机及其控制系统研发；微特电机及组件制造；计算机软硬件及外围设备制造；智能家庭消费设备制造；非公路休闲车及零配件制造；工业自动控制系统装置制造；电力电子元器件制造；专用设备制造（不含许可类专业设备制造）。户外用品销售；体育消费用智能设备制造；体育用品及器材制造；体育用品及器材批发；体育用品及器材零售；体育用品设备出租；娱乐船和运动船销售；娱乐船和运动船制造；机械设备研发。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+  "generated_report": "深圳市好盈科技股份有限公司在样本企业中排序 27，分层等级为 C 类，融合分数 0.993893，GraphSAGE 分数 0.997001。企业位于深圳市龙岗区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 14。主要正向因素包括：图谱表征-核心企业协同强度(2.523)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：经度(-0.037)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

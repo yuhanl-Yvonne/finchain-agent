@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300306077254B",
+    "company_name": "深圳市道通智能航空技术股份有限公司",
+    "standard_name": "深圳市道通智能航空技术股份有限公司",
+    "city": "深圳市",
+    "district": "南山区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "大型",
+    "registered_capital": "36557.5425万人民币",
+    "insured_count": 0,
+    "credit_score": null,
+    "legal_representative": "成转鹏",
+    "status": "存续",
+    "website": "https://www.autelrobotics.com",
+    "address": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇基金9米商业平台29-24（一照多址企业）",
+    "chain_basis": "飞行器、航空、智能无人飞行器、航空器",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 17,
+    "display_rank_label": "#17",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.99438,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.9987379,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-关系稳定性(-0.012)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 99
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 11.0,
+    "patent_total": 99,
+    "patent_recent_3y": 27,
+    "patent_breadth": 59.0
+  },
+  "scope": "一般经营项目：民用航空电子设备、自动控制设备、民用无人驾驶航空器、无线电数据传输系统、拍摄装备、摄像机产品、电子元器件、计算机软件应用的技术开发、批发；经营进出口业务；软件技术信息咨询; 房屋租赁，物业管理，水电暖供应，通信管网出租及维护。智能无人飞行器制造；智能无人飞行器销售；信息技术咨询服务。租赁服务（不含许可类租赁服务）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：民用航空电子设备、自动控制设备、民用无人驾驶航空器、无线电数据传输系统、拍摄装备、摄像机产品、电子元器件、计算机软件的生产 。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "generated_report": "深圳市道通智能航空技术股份有限公司在样本企业中排序 17，分层等级为 B 类，融合分数 0.994380，GraphSAGE 分数 0.998738。企业位于深圳市南山区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 99。主要正向因素包括：图谱表征-核心企业协同强度(2.542)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-关系稳定性(-0.012)。"
+}

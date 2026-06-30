@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440606MA531XDX75",
+    "company_name": "佛山顺德光启尖端装备有限公司",
+    "standard_name": "佛山顺德光启尖端装备有限公司",
+    "city": "佛山市",
+    "district": "顺德区",
+    "chain_position": "中游",
+    "company_type": "产业运营类",
+    "company_size": "中型",
+    "registered_capital": "5500万人民币",
+    "insured_count": 872,
+    "credit_score": null,
+    "legal_representative": "金曦",
+    "status": "存续",
+    "website": "-",
+    "address": "广东省佛山市顺德区杏坛镇顺业西路17号",
+    "chain_basis": "航空、航空器",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 10,
+    "display_rank_label": "#10",
+    "demo_white_list_level": "A",
+    "original_white_list_level": "A",
+    "score_bucket": "旗舰梯队",
+    "xgb_fusion_score": 0.994532,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.71639067,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 3,
+    "patent_degree": 4
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 13362.0,
+    "macro_per_gdp_latest": 138363.0,
+    "macro_high_tech_latest": 9330.0,
+    "macro_patent_auth_latest": 13396.0,
+    "enterprise_age": 6.0,
+    "patent_total": 4,
+    "patent_recent_3y": 0,
+    "patent_breadth": 4.0
+  },
+  "scope": "一般项目：电子产品销售；玻璃纤维增强塑料制品制造；玻璃纤维增强塑料制品销售；合成材料制造（不含危险化学品）；合成材料销售；工程和技术研究和试验发展；特种设备出租；机械设备租赁；仓储设备租赁服务；非居住房地产租赁；高性能纤维及复合材料销售；高性能纤维及复合材料制造；新材料技术研发；金属结构制造；玻璃纤维及制品制造；船用配套设备制造；通信设备制造；移动终端设备制造；雷达及配套设备制造；其他电子器件制造；电子专用材料制造；电子元器件制造；电子（气）物理设备及其他电子设备制造。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可项目：民用航空器零部件设计和生产；非金属船舶制造。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "generated_report": "佛山顺德光启尖端装备有限公司在样本企业中排序 10，分层等级为 A 类，融合分数 0.994532，GraphSAGE 分数 0.716391。企业位于佛山市顺德区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 3、专利连接 4。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)。"
+}

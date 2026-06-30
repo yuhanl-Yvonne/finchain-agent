@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "914404000684993620",
+    "company_name": "珠海市双捷科技有限公司",
+    "standard_name": "珠海市双捷科技有限公司",
+    "city": "珠海市",
+    "district": "香洲区",
+    "chain_position": "中游",
+    "company_type": "科技研发类",
+    "company_size": "小型",
+    "registered_capital": "750万人民币",
+    "insured_count": 10,
+    "credit_score": null,
+    "legal_representative": "曹雷",
+    "status": "存续",
+    "website": "http://www.svuav.com",
+    "address": "珠海市香洲区福田路18号1栋1层103-257室（集中办公区）",
+    "chain_basis": "飞行器、智能无人飞行器",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 14,
+    "display_rank_label": "#14",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.994532,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.5343628,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 21
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 4479.0,
+    "macro_per_gdp_latest": 178712.0,
+    "macro_high_tech_latest": 2974.0,
+    "macro_patent_auth_latest": 11527.0,
+    "enterprise_age": 12.0,
+    "patent_total": 21,
+    "patent_recent_3y": 6,
+    "patent_breadth": 17.0
+  },
+  "scope": "一般项目：智能机器人的研发；智能无人飞行器制造；电子专用设备制造；软件开发；通信设备制造；电动机制造。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+  "generated_report": "珠海市双捷科技有限公司在样本企业中排序 14，分层等级为 B 类，融合分数 0.994532，GraphSAGE 分数 0.534363。企业位于珠海市香洲区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 21。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链位穿透能力(-0.008)。"
+}

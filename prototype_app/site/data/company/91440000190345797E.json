@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440000190345797E",
+    "company_name": "南方电网电力科技股份有限公司",
+    "standard_name": "南方电网电力科技股份有限公司",
+    "city": "广州市",
+    "district": "越秀区",
+    "chain_position": "中游",
+    "company_type": "产业运营类",
+    "company_size": "大型",
+    "registered_capital": "56470万人民币",
+    "insured_count": 427,
+    "credit_score": null,
+    "legal_representative": "姜海龙",
+    "status": "存续",
+    "website": "http://www.csg.cn",
+    "address": "广州市越秀区西华路捶帽新街1-3号华业大厦附楼501-503室（不可作厂房使用）",
+    "chain_basis": "飞行器、智能无人飞行器、系统集成",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 18,
+    "display_rank_label": "#18",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.994369,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99814,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.432)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链内互补性5(-0.020)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 13
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 31033.0,
+    "macro_per_gdp_latest": 164171.0,
+    "macro_high_tech_latest": 13727.0,
+    "macro_patent_auth_latest": 37934.0,
+    "enterprise_age": 37.0,
+    "patent_total": 13,
+    "patent_recent_3y": 13,
+    "patent_breadth": 10.0
+  },
+  "scope": "工程和技术研究和试验发展;技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广;储能技术服务;电池制造;电池销售;计量服务;人工智能行业应用系统集成服务;信息系统集成服务;海上风电相关系统研发;碳减排、碳转化、碳捕捉、碳封存技术研发;在线能源监测技术研发;机械电气设备制造;电气机械设备销售;智能机器人的研发;特殊作业机器人制造;智能机器人销售;输配电及控制设备制造;智能输配电及控制设备销售;数字视频监控系统制造;数字视频监控系统销售;安全系统监控服务;终端计量设备制造;终端计量设备销售;智能无人飞行器制造;智能无人飞行器销售;海洋工程装备研发;智能仪器仪表制造;智能仪器仪表销售;专用设备制造（不含许可类专业设备制造）;汽车销售;新兴能源技术研发;海洋工程装备制造;海洋工程装备销售;软件开发;软件销售;物业管理;住房租赁;货物进出口;技术进出口;集成电路设计;集成电路芯片及产品销售;集成电路芯片及产品制造;集成电路芯片设计及服务;检验检测服务",
+  "generated_report": "南方电网电力科技股份有限公司在样本企业中排序 18，分层等级为 B 类，融合分数 0.994369，GraphSAGE 分数 0.998140。企业位于广州市越秀区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 13。主要正向因素包括：图谱表征-核心企业协同强度(2.549)；企业年龄(1.608)；图谱表征-创新扩散势能(0.432)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图谱表征-链内互补性5(-0.020)。"
+}

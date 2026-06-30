@@ -1,0 +1,260 @@
+{
+  "sample_size": 39,
+  "summary_cards": [
+    {
+      "label": "样本企业总数",
+      "value": 39,
+      "hint": "固定样本范围，仅保留抽样企业"
+    },
+    {
+      "label": "A/B/C/D 分层",
+      "value": "10 / 10 / 10 / 9",
+      "hint": "按 39 家内部排序重分层"
+    },
+    {
+      "label": "Top10 平均融合分数",
+      "value": "0.994532",
+      "hint": "前十样本的平均融合分数"
+    },
+    {
+      "label": "风险/专利覆盖",
+      "value": "20 / 21",
+      "hint": "有风险事件企业数 / 高专利连接企业数"
+    }
+  ],
+  "model_metrics": {
+    "graphsage": {
+      "nodes": 466,
+      "edges": 94532,
+      "test_f1": 0.6666666666666666,
+      "test_auc": 0.9923076923076923,
+      "best_epoch": 7
+    },
+    "fusion": {
+      "train_size": 326,
+      "positive_labels": 40,
+      "test_f1": 0.923076923076923,
+      "test_auc": 1.0
+    }
+  },
+  "demo_level_distribution": [
+    {
+      "name": "A",
+      "count": 10
+    },
+    {
+      "name": "B",
+      "count": 10
+    },
+    {
+      "name": "C",
+      "count": 10
+    },
+    {
+      "name": "D",
+      "count": 9
+    }
+  ],
+  "city_distribution": [
+    {
+      "name": "深圳市",
+      "count": 18
+    },
+    {
+      "name": "广州市",
+      "count": 12
+    },
+    {
+      "name": "珠海市",
+      "count": 6
+    },
+    {
+      "name": "佛山市",
+      "count": 2
+    },
+    {
+      "name": "东莞市",
+      "count": 1
+    }
+  ],
+  "chain_distribution": [
+    {
+      "name": "中游",
+      "count": 28
+    },
+    {
+      "name": "上游",
+      "count": 7
+    },
+    {
+      "name": "下游",
+      "count": 4
+    }
+  ],
+  "top_features": [
+    {
+      "feature": "emb_43",
+      "label": "图谱表征-核心企业协同强度",
+      "importance": 0.30250847,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_0",
+      "label": "图谱表征-产业链邻近性",
+      "importance": 0.29040778,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_19",
+      "label": "图谱表征-区域聚集度",
+      "importance": 0.19280292,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_60",
+      "label": "图谱表征-创新扩散势能",
+      "importance": 0.108648136,
+      "group": "graph"
+    },
+    {
+      "feature": "企业年龄",
+      "label": "企业年龄",
+      "importance": 0.089321546,
+      "group": "structured"
+    },
+    {
+      "feature": "emb_37",
+      "label": "图谱表征-供应链耦合深度",
+      "importance": 0.0041206023,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_6",
+      "label": "图谱表征-风险隔离度",
+      "importance": 0.0017600736,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_57",
+      "label": "图谱表征-业务稳定性",
+      "importance": 0.0017196406,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_38",
+      "label": "图谱表征-场景落地密度",
+      "importance": 0.0016489275,
+      "group": "graph"
+    },
+    {
+      "feature": "上游关键词命中数",
+      "label": "上游关键词命中数",
+      "importance": 0.0015609643,
+      "group": "structured"
+    },
+    {
+      "feature": "emb_18",
+      "label": "图谱表征-链位穿透能力",
+      "importance": 0.0014169005,
+      "group": "graph"
+    },
+    {
+      "feature": "emb_10",
+      "label": "图谱表征-网络中心影响力",
+      "importance": 0.001274194,
+      "group": "graph"
+    }
+  ],
+  "top_companies": [
+    {
+      "company_id": "91440300MA5FA4QL2L",
+      "company_name": "丰翼科技(深圳)有限公司",
+      "city": "深圳市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "914401065937484197",
+      "company_name": "广东新禾智慧数字科技有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440116MA59AB9P0B",
+      "company_name": "亿航智能设备有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440115734926603P",
+      "company_name": "广州市华科尔科技股份有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91530000MA6MYLGN0A",
+      "company_name": "南方电网通用航空服务有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440101MA59P95W94",
+      "company_name": "广州中科云图智能科技有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440106304742759X",
+      "company_name": "广州亿航智能技术有限公司",
+      "city": "广州市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "914419007385933083",
+      "company_name": "广东电网有限责任公司东莞供电局",
+      "city": "东莞市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440605MA52DEJ91R",
+      "company_name": "佛山市南海区大数据投资建设有限公司",
+      "city": "佛山市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    },
+    {
+      "company_id": "91440606MA531XDX75",
+      "company_name": "佛山顺德光启尖端装备有限公司",
+      "city": "佛山市",
+      "demo_white_list_level": "A",
+      "score": 0.994532
+    }
+  ],
+  "filter_options": {
+    "cities": [
+      "东莞市",
+      "佛山市",
+      "广州市",
+      "深圳市",
+      "珠海市"
+    ],
+    "levels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "chains": [
+      "上游",
+      "下游",
+      "中游"
+    ]
+  }
+}

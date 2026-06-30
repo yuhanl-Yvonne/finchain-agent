@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "914403000589938852",
+    "company_name": "深圳市大疆灵眸科技有限公司",
+    "standard_name": "深圳市大疆灵眸科技有限公司",
+    "city": "深圳市",
+    "district": "南山区",
+    "chain_position": "中游",
+    "company_type": "服务平台类",
+    "company_size": "中型",
+    "registered_capital": "51000万人民币",
+    "insured_count": 25,
+    "credit_score": null,
+    "legal_representative": "赵岩崇",
+    "status": "存续",
+    "website": "-",
+    "address": "深圳市南山区西丽街道西丽社区仙元路55号大疆天空之城T1-23F-S11",
+    "chain_basis": "无人机",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 28,
+    "display_rank_label": "#28",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.993872,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99869955,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.536)；企业年龄(1.608)；图谱表征-创新扩散势能(0.424)",
+    "top_negative": "图谱表征-关系稳定性(-0.035)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 9,
+    "patent_degree": 6
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 13.0,
+    "patent_total": 6,
+    "patent_recent_3y": 0,
+    "patent_breadth": 4.0
+  },
+  "scope": "影像设备及相关配套软件的技术开发及销售；从事计算机信息科技领域内的技术开发、技术转让、技术咨询、技术服务；展览展示服务；会务服务；电子设备、自动化控制设备、数码影像设备及相关零附件、计算机、软件及辅助设备（除计算机信息系统安全专用产品）的批发；无人机及相关软件及配件的技术开发、销售、租赁及批发；经营进出口业务（法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）。^",
+  "generated_report": "深圳市大疆灵眸科技有限公司在样本企业中排序 28，分层等级为 C 类，融合分数 0.993872，GraphSAGE 分数 0.998700。企业位于深圳市南山区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 9、专利连接 6。主要正向因素包括：图谱表征-核心企业协同强度(2.536)；企业年龄(1.608)；图谱表征-创新扩散势能(0.424)。主要约束因素包括：图谱表征-关系稳定性(-0.035)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

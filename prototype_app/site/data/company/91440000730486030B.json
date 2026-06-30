@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440000730486030B",
+    "company_name": "广东电网有限责任公司",
+    "standard_name": "广东电网有限责任公司",
+    "city": "广州市",
+    "district": "越秀区",
+    "chain_position": "下游",
+    "company_type": "投资发展类",
+    "company_size": "大型",
+    "registered_capital": "6683762.751421万人民币",
+    "insured_count": 81991,
+    "credit_score": null,
+    "legal_representative": "杨松楠",
+    "status": "存续",
+    "website": "http://www.gd.csg.cn",
+    "address": "广州市越秀区东风东路757号",
+    "chain_basis": "服务、培训",
+    "data_source": "天眼查补录30家"
+  },
+  "model_info": {
+    "demo_rank": 24,
+    "display_rank_label": "#24",
+    "demo_white_list_level": "C",
+    "original_white_list_level": "A",
+    "score_bucket": "储备梯队",
+    "xgb_fusion_score": 0.993983,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.9998795,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.534)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-技术协作活跃度(-0.065)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 3,
+    "patent_degree": 194
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 31033.0,
+    "macro_per_gdp_latest": 164171.0,
+    "macro_high_tech_latest": 13727.0,
+    "macro_patent_auth_latest": 37934.0,
+    "enterprise_age": 24.0,
+    "patent_total": 194,
+    "patent_recent_3y": 164,
+    "patent_breadth": 95.0
+  },
+  "scope": "投资、建设和经营管理广东电网，经营相关的输配电业务；参与投资、建设和经营相关的跨区域输变电和联网工程；从事电力购销业务，负责电力交易和调度；电力设备、电力器材的销售、调试、检测及试验；从事与电网经营和电力供应有关的科学研究、技术监督、技术开发、电力生产调度信息通信、咨询服务、电力教育和业务培训。(依法须经批准的项目，经相关部门批准后方可开展经营活动)〓",
+  "generated_report": "广东电网有限责任公司在样本企业中排序 24，分层等级为 C 类，融合分数 0.993983，GraphSAGE 分数 0.999880。企业位于广州市越秀区，处于下游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 3、专利连接 194。主要正向因素包括：图谱表征-核心企业协同强度(2.534)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-技术协作活跃度(-0.065)；图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)。"
+}

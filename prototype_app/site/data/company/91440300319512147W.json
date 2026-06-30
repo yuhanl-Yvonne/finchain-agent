@@ -1,0 +1,54 @@
+{
+  "basic_info": {
+    "company_id": "91440300319512147W",
+    "company_name": "深圳市喜悦智慧数据有限公司",
+    "standard_name": "深圳市喜悦智慧数据有限公司",
+    "city": "深圳市",
+    "district": "龙华区",
+    "chain_position": "中游",
+    "company_type": "产业运营类",
+    "company_size": "未标注",
+    "registered_capital": "未披露",
+    "insured_count": null,
+    "credit_score": 75.0,
+    "legal_representative": "未披露",
+    "status": "存续",
+    "website": "未披露",
+    "address": "深圳市龙华区民治街道大岭社区红山六九七九二期9栋702（26座7层702室）",
+    "chain_basis": "系统集成",
+    "data_source": "天眼查关键词企业"
+  },
+  "model_info": {
+    "demo_rank": 16,
+    "display_rank_label": "#16",
+    "demo_white_list_level": "B",
+    "original_white_list_level": "A",
+    "score_bucket": "重点梯队",
+    "xgb_fusion_score": 0.994384,
+    "xgb_pred_label": "是",
+    "graphsage_score": 0.99606836,
+    "graphsage_pred_label": "是",
+    "sample_label": "是",
+    "true_label": "是",
+    "top_positive": "图谱表征-核心企业协同强度(2.543)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)",
+    "top_negative": "图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图嵌入特征emb_14(-0.016)"
+  },
+  "graph_snapshot": {
+    "chain_degree": 1,
+    "region_degree": 1,
+    "risk_event_count": 0,
+    "patent_degree": 6
+  },
+  "macro_snapshot": {
+    "macro_gdp_latest": 36802.0,
+    "macro_per_gdp_latest": 205714.0,
+    "macro_high_tech_latest": 25700.0,
+    "macro_patent_auth_latest": 74675.0,
+    "enterprise_age": 11.0,
+    "patent_total": 6,
+    "patent_recent_3y": 6,
+    "patent_breadth": 5.0
+  },
+  "scope": "一般经营项目：大数据系统开发与运营；人工智能系统的开发与销售；机器人产品技术开发与销售；网路硬件产品的开发与销售；人力资源系统软件的技术开发与销售；计算机软件、信息系统软件的开发与销售；信息系统设计、集成、运行维护；信息技术咨询。信息系统集成服务；人工智能理论与算法软件开发；人工智能应用软件开发；人工智能硬件销售；智能机器人的研发；集成电路设计；物联网技术研发；物联网技术服务；工业互联网数据服务；云计算装备技术服务；数据处理和存储支持服务；碳减排、碳转化、碳捕捉、碳封存技术研发。融资咨询服务；不动产登记代理服务；非融资担保服务；社会经济咨询服务；安全咨询服务；信息咨询服务（不含许可类信息咨询服务）；财务咨询；税务服务；咨询策划服务；招投标代理服务；工程管理服务。劳务服务（不含劳务派遣）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：机器人产品的生产；网路硬件产品的生产。认证服务；建筑智能化系统设计。资产评估。建设工程施工。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "generated_report": "深圳市喜悦智慧数据有限公司在样本企业中排序 16，分层等级为 B 类，融合分数 0.994384，GraphSAGE 分数 0.996068。企业位于深圳市龙华区，处于中游环节，图谱侧表现为产业链连接 1、区域连接 1、风险事件 0、专利连接 6。主要正向因素包括：图谱表征-核心企业协同强度(2.543)；企业年龄(1.608)；图谱表征-创新扩散势能(0.438)。主要约束因素包括：图谱表征-风险隔离度(-0.028)；图谱表征-业务稳定性(-0.025)；图嵌入特征emb_14(-0.016)。"
+}

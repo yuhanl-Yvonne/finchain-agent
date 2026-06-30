@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FinChain-Agent 正式版展示台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="backdrop">
+      <div class="aurora aurora-a"></div>
+      <div class="aurora aurora-b"></div>
+      <div class="noise-overlay"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero glass-surface glass-surface--hero" data-glass data-glass-mode="static">
+        <div class="hero-copy">
+          <p class="eyebrow">FinChain-Agent / Official Console</p>
+          <h1>FinChain-Agent</h1>
+          <h2>基于知识图谱与图神经网络的产业链上下游企业白名单智能筛选系统</h2>
+          <p class="hero-text">
+            面向产业链金融白名单初筛、关系穿透与可解释推荐的系统展示界面。
+          </p>
+          <div class="hero-tags">
+            <span>知识图谱建模</span>
+            <span>GraphSAGE 图谱表征</span>
+            <span>XGBoost 融合白名单</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div id="summary-cards" class="summary-grid"></div>
+        </div>
+      </section>
+
+      <section class="top-grid">
+        <article class="panel glass-surface" data-glass data-glass-mode="lite">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">模型概览</p>
+              <h3>核心指标与梯队分布</h3>
+              <p class="panel-desc">以白名单推荐、图谱表征和企业分层结果为核心内容。</p>
+            </div>
+            <div class="panel-chip">样本范围 <span id="sample-size-chip">39</span></div>
+          </div>
+
+          <div id="metric-panels" class="metric-panels"></div>
+
+          <div class="overview-split">
+            <section class="mini-section">
+              <h4>分层等级分布</h4>
+              <div id="demo-level-distribution" class="bar-list"></div>
+            </section>
+            <section class="mini-section">
+              <h4>城市分布</h4>
+              <div id="city-distribution" class="bar-list"></div>
+            </section>
+          </div>
+        </article>
+
+        <article class="panel glass-surface" data-glass data-glass-mode="lite">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">关键解释特征</p>
+              <h3>结构化特征与图谱表征</h3>
+              <p class="panel-desc">将 SHAP 与重要性结果统一映射为规范化特征名称。</p>
+            </div>
+          </div>
+          <div class="legend-row">
+            <span class="legend-pill legend-structured">结构化特征</span>
+            <span class="legend-pill legend-graph">图谱表征特征</span>
+          </div>
+          <div id="feature-importance" class="bar-list feature-list"></div>
+        </article>
+      </section>
+
+      <section class="bottom-grid">
+        <article class="panel glass-surface" data-glass data-glass-mode="static">
+          <div class="panel-head filter-head">
+            <div>
+              <p class="panel-kicker">企业列表</p>
+              <h3>样本企业分层结果</h3>
+              <p class="panel-desc">左侧呈现企业名单与筛选条件，右侧显示企业详情信息。</p>
+            </div>
+            <form id="filter-form" class="filter-form">
+              <input id="search-input" type="search" placeholder="搜索企业名称或统一社会信用代码" />
+              <select id="level-select">
+                <option value="">全部分层等级</option>
+              </select>
+              <select id="city-select">
+                <option value="">全部城市</option>
+              </select>
+              <select id="chain-select">
+                <option value="">全部产业链环节</option>
+              </select>
+              <button type="submit">应用筛选</button>
+            </form>
+          </div>
+
+          <div class="content-grid">
+            <div class="table-panel">
+              <div class="table-meta">
+                <span id="table-count">0 家样本企业</span>
+                <span>点击企业名称查看详情</span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>排序</th>
+                      <th>企业</th>
+                      <th>等级</th>
+                      <th>梯队</th>
+                      <th>城市</th>
+                      <th>环节</th>
+                      <th>融合分数</th>
+                      <th>GraphSAGE</th>
+                      <th>风险数</th>
+                    </tr>
+                  </thead>
+                  <tbody id="company-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <aside class="detail-panel glass-surface glass-surface--detail" data-glass data-glass-mode="lite">
+              <div id="company-detail" class="detail-state">请选择左侧企业查看详情。</div>
+            </aside>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <template id="detail-template">
+      <div class="detail-card">
+        <div class="detail-header">
+          <div>
+            <p class="detail-eyebrow"></p>
+            <h3 class="detail-title"></h3>
+            <p class="detail-subtitle"></p>
+          </div>
+          <div class="level-badge"></div>
+        </div>
+
+        <div class="detail-metrics"></div>
+
+        <section class="detail-section detail-section--summary">
+          <div>
+            <h4>企业概况</h4>
+            <p class="detail-report"></p>
+          </div>
+          <div>
+            <h4>解释结果</h4>
+            <p><strong>正向驱动：</strong><span class="detail-positive"></span></p>
+            <p><strong>负向约束：</strong><span class="detail-negative"></span></p>
+          </div>
+        </section>
+
+        <section class="detail-section detail-section--split">
+          <div>
+            <h4>图谱指标</h4>
+            <div class="graph-grid"></div>
+          </div>
+          <div>
+            <h4>基础信息</h4>
+            <div class="info-grid"></div>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h4>经营范围</h4>
+          <p class="detail-scope"></p>
+        </section>
+      </div>
+    </template>
+
+    <script>
+      window.APP_DATA_MODE = window.APP_DATA_MODE || "static";
+      window.APP_API_BASE = window.APP_API_BASE || "";
+      window.APP_STATIC_BASE = window.APP_STATIC_BASE || ".";
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>
