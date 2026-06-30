@@ -215,20 +215,6 @@ function renderLevelLegendCard() {
   `;
 }
 
-function normalizeCityName(name) {
-  return String(name || "").replace(/市|区|县/g, "").trim();
-}
-
-function getGuangdongCityAnchors() {
-  return {
-    广州: { x: 198, y: 242, labelDx: -84, labelDy: -44, valueDx: -84, valueDy: -20 },
-    深圳: { x: 262, y: 320, labelDx: 72, labelDy: 26, valueDx: 72, valueDy: 48 },
-    珠海: { x: 197, y: 339, labelDx: -78, labelDy: 30, valueDx: -78, valueDy: 52 },
-    佛山: { x: 173, y: 248, labelDx: -82, labelDy: 6, valueDx: -82, valueDy: 28 },
-    东莞: { x: 229, y: 292, labelDx: 70, labelDy: -12, valueDx: 70, valueDy: 12 },
-  };
-}
-
 function buildGuangdongBaseMap() {
   return `
     <div class="gd-map-image-mask">
@@ -245,52 +231,7 @@ function renderGuangdongMap(rows) {
   const container = document.getElementById("guangdong-map");
   if (!container) return;
 
-  const safeRows = asArray(rows);
-  const anchors = getGuangdongCityAnchors();
-  const focusCities = new Set(["广州", "深圳", "珠海", "佛山", "东莞"]);
-  const normalizedRows = safeRows
-    .map((item) => {
-      const key = normalizeCityName(item.label || item.name);
-      return {
-        key,
-        label: item.label || item.name,
-        count: Number(item.count) || 0,
-        point: anchors[key],
-      };
-    })
-    .filter((item) => item.point && focusCities.has(item.key));
-
   container.innerHTML = buildGuangdongBaseMap();
-  if (normalizedRows.length === 0) {
-    container.insertAdjacentHTML("beforeend", `<div class="empty-state">暂无城市分布数据</div>`);
-    return;
-  }
-
-  const max = Math.max(...normalizedRows.map((item) => item.count), 1);
-  const overlay = document.createElement("div");
-  overlay.className = "gd-bubble-layer";
-
-  normalizedRows.forEach((item) => {
-    const bubble = document.createElement("button");
-    const size = 18 + (item.count / max) * 34;
-    bubble.type = "button";
-    bubble.className = "gd-bubble";
-    bubble.style.left = `${item.point.x}px`;
-    bubble.style.top = `${item.point.y}px`;
-    bubble.style.width = `${size}px`;
-    bubble.style.height = `${size}px`;
-    bubble.innerHTML = `
-      <span class="gd-bubble-core"></span>
-      <span class="gd-bubble-ring"></span>
-      <span class="gd-bubble-line" style="--line-width:${Math.max(Math.abs(item.point.labelDx || 0), 34)}px;"></span>
-      <span class="gd-bubble-label" style="--label-dx:${item.point.labelDx || 0}px; --label-dy:${item.point.labelDy || 0}px;">${item.label}</span>
-      <span class="gd-bubble-value" style="--value-dx:${item.point.valueDx || 0}px; --value-dy:${item.point.valueDy || 0}px;">${formatNumber(item.count)}</span>
-    `;
-    bubble.setAttribute("aria-label", `${item.label}，${item.count}家企业`);
-    overlay.appendChild(bubble);
-  });
-
-  container.appendChild(overlay);
 }
 
 function populateFilters(filterOptions) {

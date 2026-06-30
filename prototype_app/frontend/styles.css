@@ -417,81 +417,6 @@ body {
   filter: saturate(1.02) brightness(0.96);
 }
 
-.gd-bubble-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.gd-bubble {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border: 0;
-  background: transparent;
-  padding: 0;
-  cursor: default;
-}
-
-.gd-bubble-core,
-.gd-bubble-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-}
-
-.gd-bubble-core {
-  background:
-    radial-gradient(circle at 34% 34%, rgba(247, 254, 255, 0.98), rgba(111, 217, 255, 0.95) 46%, rgba(18, 112, 222, 0.96) 100%);
-  box-shadow:
-    0 0 0 1px rgba(226, 250, 255, 0.9) inset,
-    0 0 22px rgba(94, 194, 255, 0.64),
-    0 0 38px rgba(46, 134, 236, 0.34);
-}
-
-.gd-bubble-ring {
-  inset: -12px;
-  border: 1px solid rgba(111, 217, 255, 0.2);
-  opacity: 0.7;
-}
-
-.gd-bubble-line {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: var(--line-width, 34px);
-  height: 1px;
-  background: linear-gradient(90deg, rgba(139, 224, 255, 0.8), rgba(139, 224, 255, 0));
-  transform-origin: left center;
-  transform: translate(0, 0);
-  opacity: 0.54;
-}
-
-.gd-bubble-label,
-.gd-bubble-value {
-  position: absolute;
-  left: 50%;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.gd-bubble-label {
-  top: 50%;
-  transform: translate(calc(-50% + var(--label-dx, 0px)), calc(-50% + var(--label-dy, 0px)));
-  color: #ecfbff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-shadow: 0 0 14px rgba(71, 180, 255, 0.42);
-}
-
-.gd-bubble-value {
-  top: 50%;
-  transform: translate(calc(-50% + var(--value-dx, 0px)), calc(-50% + var(--value-dy, 0px)));
-  color: #92ccff;
-  font-size: 12px;
-  font-weight: 500;
-}
-
 .top-grid,
 .bottom-grid {
   grid-template-columns: 1fr;
@@ -518,16 +443,16 @@ body {
 }
 
 .level-legend-card {
-  min-width: 228px;
-  padding: 12px 14px 14px;
-  border-radius: 18px;
+  min-width: 320px;
+  padding: 18px 20px 20px;
+  border-radius: 22px;
   border: 1px solid rgba(111, 191, 255, 0.14);
   background: rgba(10, 33, 61, 0.46);
 }
 
 .level-legend-title {
-  margin-bottom: 10px;
-  font-size: 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #8bcfff;
@@ -536,24 +461,24 @@ body {
 .level-legend-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 12px;
+  gap: 14px 16px;
 }
 
 .level-legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
 }
 
 .level-legend-badge {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   flex: 0 0 auto;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: #f4fbff;
   border: 1px solid rgba(172, 231, 255, 0.2);
@@ -561,7 +486,7 @@ body {
 
 .level-legend-text {
   min-width: 0;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-soft);
   white-space: nowrap;
 }
@@ -930,6 +855,7 @@ td.level-d {
 .level-badge {
   min-width: 76px;
   height: 76px;
+  margin-right: 18px;
   border-radius: 22px;
   display: grid;
   place-items: center;
