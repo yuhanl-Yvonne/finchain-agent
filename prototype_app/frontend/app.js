@@ -162,15 +162,15 @@ function renderCompanyTable(payload) {
       row.classList.add("active");
     }
     row.innerHTML = `
-      <td>${item.display_rank_label}</td>
-      <td>${item.company_name}</td>
-      <td class="level-${String(item.demo_white_list_level || item.white_list_level || "").toLowerCase()}">${item.demo_white_list_level || item.white_list_level || "未分层"}</td>
-      <td>${item.score_bucket || "待更新"}</td>
-      <td>${item.city}</td>
-      <td>${item.chain_position}</td>
-      <td>${formatScore(item.xgb_fusion_score)}</td>
-      <td>${formatScore(item.graphsage_score)}</td>
-      <td>${formatNumber(item.risk_events)}</td>
+      <td class="cell-rank">${item.display_rank_label}</td>
+      <td class="cell-company" title="${item.company_name}">${item.company_name}</td>
+      <td class="cell-level level-${String(item.demo_white_list_level || item.white_list_level || "").toLowerCase()}">${item.demo_white_list_level || item.white_list_level || "未分层"}</td>
+      <td class="cell-bucket">${item.score_bucket || "待更新"}</td>
+      <td class="cell-city">${item.city}</td>
+      <td class="cell-chain">${item.chain_position}</td>
+      <td class="cell-score">${formatScore(item.xgb_fusion_score)}</td>
+      <td class="cell-score">${formatScore(item.graphsage_score)}</td>
+      <td class="cell-risk">${formatNumber(item.risk_events)}</td>
     `;
     row.addEventListener("click", async () => {
       state.currentCompanyId = item.company_id;
@@ -188,7 +188,7 @@ function buildInfoGrid(items) {
       ([key, value]) => `
         <div class="info-item">
           <span class="key">${key}</span>
-          <span class="val">${value || "未披露"}</span>
+          <span class="val" title="${value || "未披露"}">${value || "未披露"}</span>
         </div>
       `
     )

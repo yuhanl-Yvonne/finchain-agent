@@ -1,0 +1,313 @@
+{
+  "rows": 466,
+  "positive_labels": 40,
+  "negative_labels": 426,
+  "train_rows": 326,
+  "val_rows": 70,
+  "test_rows": 70,
+  "config": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 2,
+    "scale_pos_weight": 10.642857142857142,
+    "seed": 42
+  },
+  "train_metrics": {
+    "accuracy": 0.9969325153374233,
+    "precision": 0.9655172413793104,
+    "recall": 1.0,
+    "f1": 0.9824561403508771,
+    "auc": 1.0
+  },
+  "val_metrics": {
+    "accuracy": 0.9857142857142858,
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1": 0.923076923076923,
+    "auc": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.9857142857142858,
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1": 0.923076923076923,
+    "auc": 1.0
+  },
+  "top_features": [
+    {
+      "feature": "emb_43",
+      "importance": 0.30250847339630127
+    },
+    {
+      "feature": "emb_0",
+      "importance": 0.29040777683258057
+    },
+    {
+      "feature": "emb_19",
+      "importance": 0.19280292093753815
+    },
+    {
+      "feature": "emb_60",
+      "importance": 0.1086481362581253
+    },
+    {
+      "feature": "企业年龄",
+      "importance": 0.0893215462565422
+    },
+    {
+      "feature": "emb_37",
+      "importance": 0.004120602272450924
+    },
+    {
+      "feature": "emb_6",
+      "importance": 0.0017600735882297158
+    },
+    {
+      "feature": "emb_57",
+      "importance": 0.0017196405678987503
+    },
+    {
+      "feature": "emb_38",
+      "importance": 0.0016489274566993117
+    },
+    {
+      "feature": "上游关键词命中数",
+      "importance": 0.0015609642723575234
+    },
+    {
+      "feature": "emb_18",
+      "importance": 0.0014169005444273353
+    },
+    {
+      "feature": "emb_10",
+      "importance": 0.0012741939863190055
+    },
+    {
+      "feature": "emb_33",
+      "importance": 0.0009950321400538087
+    },
+    {
+      "feature": "emb_20",
+      "importance": 0.000674655195325613
+    },
+    {
+      "feature": "emb_5",
+      "importance": 0.0005242684856057167
+    },
+    {
+      "feature": "emb_4",
+      "importance": 0.00015769913443364203
+    },
+    {
+      "feature": "emb_25",
+      "importance": 0.0001362634648103267
+    },
+    {
+      "feature": "emb_45",
+      "importance": 0.00012441290891729295
+    },
+    {
+      "feature": "经度",
+      "importance": 6.686351116513833e-05
+    },
+    {
+      "feature": "emb_44",
+      "importance": 4.9156406021211296e-05
+    },
+    {
+      "feature": "emb_48",
+      "importance": 4.2416264477651566e-05
+    },
+    {
+      "feature": "emb_56",
+      "importance": 2.146200858987868e-05
+    },
+    {
+      "feature": "emb_14",
+      "importance": 1.5097004506969824e-05
+    },
+    {
+      "feature": "emb_8",
+      "importance": 2.5217709662683774e-06
+    },
+    {
+      "feature": "emb_15",
+      "importance": 0.0
+    },
+    {
+      "feature": "emb_23",
+      "importance": 0.0
+    },
+    {
+      "feature": "emb_22",
+      "importance": 0.0
+    },
+    {
+      "feature": "emb_21",
+      "importance": 0.0
+    },
+    {
+      "feature": "emb_54",
+      "importance": 0.0
+    },
+    {
+      "feature": "emb_55",
+      "importance": 0.0
+    }
+  ],
+  "top_shap_features": [
+    {
+      "feature": "emb_43",
+      "mean_abs_shap": 2.7314436435699463,
+      "mean_shap": -2.262866258621216
+    },
+    {
+      "feature": "企业年龄",
+      "mean_abs_shap": 1.4031002521514893,
+      "mean_shap": -1.1355680227279663
+    },
+    {
+      "feature": "emb_60",
+      "mean_abs_shap": 0.49493616819381714,
+      "mean_shap": -0.41481688618659973
+    },
+    {
+      "feature": "emb_19",
+      "mean_abs_shap": 0.3136000633239746,
+      "mean_shap": -0.258467435836792
+    },
+    {
+      "feature": "emb_0",
+      "mean_abs_shap": 0.13296733796596527,
+      "mean_shap": -0.11161071062088013
+    },
+    {
+      "feature": "emb_6",
+      "mean_abs_shap": 0.09444766491651535,
+      "mean_shap": -0.030928900465369225
+    },
+    {
+      "feature": "emb_57",
+      "mean_abs_shap": 0.07749512791633606,
+      "mean_shap": -0.03337927907705307
+    },
+    {
+      "feature": "emb_33",
+      "mean_abs_shap": 0.03581275790929794,
+      "mean_shap": -0.0274788960814476
+    },
+    {
+      "feature": "emb_38",
+      "mean_abs_shap": 0.02890041284263134,
+      "mean_shap": -0.02245176024734974
+    },
+    {
+      "feature": "emb_37",
+      "mean_abs_shap": 0.02566344663500786,
+      "mean_shap": -0.021924179047346115
+    },
+    {
+      "feature": "emb_18",
+      "mean_abs_shap": 0.021106403321027756,
+      "mean_shap": -0.009882448241114616
+    },
+    {
+      "feature": "emb_20",
+      "mean_abs_shap": 0.019873540848493576,
+      "mean_shap": -0.015509326942265034
+    },
+    {
+      "feature": "emb_48",
+      "mean_abs_shap": 0.014638863503932953,
+      "mean_shap": -0.008055701851844788
+    },
+    {
+      "feature": "emb_56",
+      "mean_abs_shap": 0.013468805700540543,
+      "mean_shap": -0.00767018087208271
+    },
+    {
+      "feature": "emb_10",
+      "mean_abs_shap": 0.013157330453395844,
+      "mean_shap": -0.009828032925724983
+    },
+    {
+      "feature": "emb_44",
+      "mean_abs_shap": 0.0069950539618730545,
+      "mean_shap": -0.0039895400404930115
+    },
+    {
+      "feature": "emb_25",
+      "mean_abs_shap": 0.004568122327327728,
+      "mean_shap": 0.0025039357133209705
+    },
+    {
+      "feature": "emb_5",
+      "mean_abs_shap": 0.0043221390806138515,
+      "mean_shap": 0.00187130575068295
+    },
+    {
+      "feature": "经度",
+      "mean_abs_shap": 0.00333505985327065,
+      "mean_shap": 0.0020788847468793392
+    },
+    {
+      "feature": "emb_4",
+      "mean_abs_shap": 0.0030631059780716896,
+      "mean_shap": 0.0016582015668973327
+    },
+    {
+      "feature": "emb_8",
+      "mean_abs_shap": 0.002801883965730667,
+      "mean_shap": -0.0015278949867933989
+    },
+    {
+      "feature": "emb_14",
+      "mean_abs_shap": 0.0021727816201746464,
+      "mean_shap": 0.0015599995385855436
+    },
+    {
+      "feature": "emb_45",
+      "mean_abs_shap": 0.0013693016953766346,
+      "mean_shap": 0.000649906403850764
+    },
+    {
+      "feature": "上游关键词命中数",
+      "mean_abs_shap": 0.0009493367979303002,
+      "mean_shap": 0.00024755107006058097
+    },
+    {
+      "feature": "emb_13",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    },
+    {
+      "feature": "emb_21",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    },
+    {
+      "feature": "emb_53",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    },
+    {
+      "feature": "emb_54",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    },
+    {
+      "feature": "emb_55",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    },
+    {
+      "feature": "emb_17",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0
+    }
+  ]
+}
