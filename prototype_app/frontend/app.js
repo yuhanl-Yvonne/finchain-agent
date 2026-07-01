@@ -220,7 +220,7 @@ function buildGuangdongBaseMap() {
     <div class="gd-map-image-mask">
       <img
         class="gd-map-image"
-        src="/Users/lyh/Desktop/5.15产学研文献/d38d2edb-d45c-46b0-b40b-7fc660a5cafc.png"
+        src="./assets/guangdong-map.png"
         alt="广东省样本企业空间分布图"
       />
     </div>

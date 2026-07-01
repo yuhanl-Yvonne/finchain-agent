@@ -25,6 +25,9 @@ def copy_frontend_assets() -> None:
     shutil.copy2(FRONTEND_DIR / "index.html", SITE_DIR / "index.html")
     shutil.copy2(FRONTEND_DIR / "styles.css", SITE_DIR / "styles.css")
     shutil.copy2(FRONTEND_DIR / "app.js", SITE_DIR / "app.js")
+    frontend_assets_dir = FRONTEND_DIR / "assets"
+    if frontend_assets_dir.exists():
+        shutil.copytree(frontend_assets_dir, SITE_DIR / "assets", dirs_exist_ok=True)
     index_path = SITE_DIR / "index.html"
     html = index_path.read_text(encoding="utf-8")
     html = html.replace('window.APP_DATA_MODE = window.APP_DATA_MODE || "api";', 'window.APP_DATA_MODE = window.APP_DATA_MODE || "static";')
